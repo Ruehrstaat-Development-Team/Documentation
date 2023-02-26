@@ -22,11 +22,11 @@
 - buttons
     */
 section.cover .cover-main > p:last-child a {
-    color: green !important;
+    color: rgb(0, 0, 0) !important;
 }
 
 section.cover .cover-main > p:last-child a:hover {
-    color: green !important;
+    color: rgb(255, 255, 255) !important;
 }
 
 /**
