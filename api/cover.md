@@ -7,4 +7,4 @@
 > Documentation for all Ruehrstaat Systems
 
 [Home](/)
-[Get Started](#introduction)
+[Get Started](#ruehrstaat-api-documentation)
