@@ -1,6 +1,6 @@
 <!-- _coverpage.md -->
 
-![logo](_static/Logo200x200.png)
+![logo](static/Logo200x200.png)
 
 # RUEHRSTAAT SQUADRON <small>Docs</small>
 
