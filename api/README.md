@@ -22,10 +22,10 @@ curl --location 'https://api.ruehrstaat.de/api/v1/getAllCarriers' \
 
 ### getAllCarriers
 
-Returns all carriers registered carriers in the database that your token has read-access to.
+Returns all registered carriers in the database that your token has read-access to.
 
 #### Request
-Allowed-Types: `GET`
+**Allowed-Types**: `GET`
 ```bash
 curl --location 'https://api.ruehrstaat.de/api/v1/getAllCarriers' \
 --header 'Authorization: Bearer Rnfk4apD6qRpHQPer4sg5sNdeo4DRbFmrhPcCd6kR' \
@@ -91,7 +91,7 @@ curl --location 'https://api.ruehrstaat.de/api/v1/getAllCarriers' \
 Returns all carrier services registered in the database.
 
 #### Request
-Allowed-Types: `GET`
+**Allowed-Types**: `GET`
 ```bash
 curl --location 'https://api.ruehrstaat.de/api/v1/getAllServices' \
 --header 'Authorization: Bearer Rnfk4apD6qRpHQPer4sg5sNdeo4DRbFmrhPcCd6kR' \
@@ -184,8 +184,8 @@ curl --location 'https://api.ruehrstaat.de/api/v1/getAllServices' \
 Returns specified carrier options registered in the database.
 
 #### Request
-Allowed-Types: `GET`<br>
-Parameters:<br>
+**Allowed-Types**: `GET`<br>
+**Parameters**:<br>
 `type`=`docking`,`category`
 ```bash
 curl --location 'https://api.ruehrstaat.de/api/v1/getCarrierInfo?type=docking' \
