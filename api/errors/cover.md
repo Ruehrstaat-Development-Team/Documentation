@@ -1,13 +1,13 @@
 <!-- _coverpage.md -->
 
-![logo](../static/Logo200x200.png)
+![logo](../../static/Logo200x200.png)
 
 # RUEHRSTAAT API<small>Docs</small>
 
-> General API<br>v1.0.2
+> Errors and Exceptions<br>v1.0.2
 
 [Authentication](/api/authentication/#api-documentation)
-[General API](#api-documentation)
+[General API](/api/#api-documentation)
 [Connector API](/api/connector/#api-documentation)
-[Errors](/api/errors/#api-documentation)
+[Errors](#api-documentation)
 [Home](/)

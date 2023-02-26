@@ -26,7 +26,7 @@ section.cover .cover-main > p:last-child a {
 }
 
 section.cover .cover-main > p:last-child a:hover {
-    color: rgb(255, 255, 255) !important;
+    background: #ffffff44;
 }
 
 /**
@@ -37,5 +37,15 @@ section.cover .cover-main > p:last-child a:last-child {
 }
 
 section.cover .cover-main > p:last-child a:last-child:hover {
-    color: #c3f8ac !important;
+    background: rgb(158, 8, 8);
+    border-color: rgb(158, 8, 8);
+}
+
+
+.sidebar{
+    background: #3a3a3a;
+}
+
+.sidebar-toggle{
+    background: #3a3a3a00;
 }

@@ -1,4 +1,5 @@
-# Ruehrstaat API Documentation
+# API Documentation
+# GENERAL USE API
 
 ## Introduction
 
@@ -6,33 +7,22 @@ The Ruehrstaat API offers an API for the squadron to access ingame data for carr
 
 The current API Endpoint is: `https://api.ruehrstaat.de/api/v1/`
 
-## Authentication
-
-To use the API you need to authenticate yourself. The API uses a token based authentication. A token must be provided in the `Authorization` header of the request. The token must be prefixed with `Bearer <token>`. A token will be provided to you by the squadron command if you provide us with a use case for the API.<br>
-The Key `Rnfk4apD6qRpHQPer4sg5sNdeo4DRbFmrhPcCd6kR` will be used in all examples below, this is obviously not a valid token.
-
-### Authentication Example
-```bash
-curl --location 'https://api.ruehrstaat.de/api/v1/getAllCarriers' \
---header 'Authorization: Bearer Rnfk4apD6qRpHQPer4sg5sNdeo4DRbFmrhPcCd6kR' \
---data ''
-```
-
 ## API Endpoints
 
 ### getAllCarriers
 
 Returns all registered carriers in the database that your token has read-access to.
 
-#### Request
+#### Requests
 **Allowed-Types**: `GET`
+##### GET getAllCarriers
+**Request**
 ```bash
 curl --location 'https://api.ruehrstaat.de/api/v1/getAllCarriers' \
 --header 'Authorization: Bearer Rnfk4apD6qRpHQPer4sg5sNdeo4DRbFmrhPcCd6kR' \
 --data ''
 ```
-#### Example Response
-
+**Response**
 ```json
 {
     "carriers": [
@@ -85,21 +75,21 @@ curl --location 'https://api.ruehrstaat.de/api/v1/getAllCarriers' \
     ]
 }
 ```
-
+---
 ### getAllServices
 
 Returns all carrier services registered in the database.
 
-#### Request
+#### Requests
 **Allowed-Types**: `GET`
+##### GET getAllServices
+**Request**
 ```bash
 curl --location 'https://api.ruehrstaat.de/api/v1/getAllServices' \
 --header 'Authorization: Bearer Rnfk4apD6qRpHQPer4sg5sNdeo4DRbFmrhPcCd6kR' \
 --data ''
 ```
-
-#### Example Response
-
+**Response**
 ```json
 {
     "services": [
@@ -178,23 +168,30 @@ curl --location 'https://api.ruehrstaat.de/api/v1/getAllServices' \
     ]
 }
 ```
-
+---
 ### getCarrierInfo
 
 Returns specified carrier options registered in the database.
 
-#### Request
+#### Requests
 **Allowed-Types**: `GET`<br>
+
+##### GET getCarrierInfo
+
 **Parameters**:<br>
 `type`=`docking`,`category`
+
+**REQUEST**
+
 ```bash
 curl --location 'https://api.ruehrstaat.de/api/v1/getCarrierInfo?type=docking' \
 --header 'Authorization: Bearer Rnfk4apD6qRpHQPer4sg5sNdeo4DRbFmrhPcCd6kR'
 ```
 
-#### Example Responses
+**RESPONSES**
 
-##### `type`=`docking` Response:
+###### Type Docking
+`type`=`docking`
 ```json
 {
     "dockingAccess": [
@@ -213,7 +210,8 @@ curl --location 'https://api.ruehrstaat.de/api/v1/getCarrierInfo?type=docking' \
     ]
 }
 ```
-##### `type`=`category`	Response:
+###### Type Category
+`type`=`category`
 ```json
 {
     "carrierCategory": [
@@ -236,119 +234,14 @@ curl --location 'https://api.ruehrstaat.de/api/v1/getCarrierInfo?type=docking' \
     ]
 }
 ```
-
-### carrierJump
-
-Updates the current Location of the carrier and puts the previous Location into the previous Location field. Made spcifically for our EDMC plugin.
-
-#### Request
-**Allowed-Types:** `PUT`<br>
-**Required-Parameters:**<br>
-`id`=`<carrierID>` (example: `6695835845`)<br>
-`type`=`jump`,`cancel`<br>
-
-**Optional-Parameters:**<br>
-`source`=`<sourceApplication>` (example: `EDMC`, default: `other`)<br>
-
-**Type-Specific-Parameters:**<br>
-`body`=`<bodyName>` (example: `Sowiio ABC 1`, required-when-type: `jump`)<br>
-
-```bash
-curl --location --request PUT 'https://api.ruehrstaat.de/api/v1/carrierJump' \
---header 'Authorization: Bearer Rnfk4apD6qRpHQPer4sg5sNdeo4DRbFmrhPcCd6kR' \
---form 'id="6695835845"' \
---form 'type="jump"' \
---form 'source="EDMC"' \
---form 'body="Sowiio ABC 1"'
-```
-
-#### Example Responses
-
-##### `type`=`jump` Response:
-```json
-{
-    "success": "Carrier jump noted"
-}
-```
-
-##### `type`=`cancel` Response:
-```json
-{
-    "success": "Carrier jump cancelled"
-}
-```
-
-### carrierPermission
-
-Updates the docking permission of the carrier. Made spcifically for our EDMC plugin.
-
-#### Request
-**Allowed-Types:** `PUT`<br>
-**Required-Parameters:**<br>
-`id`=`<carrierID>` (example: `6695835845`)<br>
-`access`=`<dockingAccess>` (available options see: [getCarrierInfo](#getcarrierinfo) -> `type`=`docking`)<br>
-
-**Optional-Parameters:**<br>
-`source`=`<sourceApplication>` (example: `EDMC`, default: `other`)<br>
-`discord_id`=`<sourceDiscordID>` (example: `758553483966448477`)<br>
-
-```bash
-curl --location --request PUT 'https://api.ruehrstaat.de/api/v1/carrierPermission' \
---header 'Authorization: Bearer Rnfk4apD6qRpHQPer4sg5sNdeo4DRbFmrhPcCd6kR' \
---form 'id="6695835845"' \
---form 'access="all"' \
---form 'source="Discord"'
---form 'discord_id="758553483966448477"'
-```
-
-#### Example Responses
-
-```json
-{
-    "success": "Carrier permission updated"
-}
-```
-
-### carrierService
-
-Updates the service status of the carrier. Made spcifically for our EDMC plugin.
-
-#### Request
-**Allowed-Types:** `PUT`<br>
-**Required-Parameters:**<br>
-`id`=`<carrierID>` (example: `6695835845`)<br>
-`operation`=`activate`,`resume`,`deactivate`,`pause` (represent ED Journal Entries)<br>
-`service`=`<serviceName>` (as used in ED Journal Entries)<br>
-
-**Optional-Parameters:**<br>
-`source`=`<sourceApplication>` (example: `EDMC`, default: `other`)<br>
-`discord_id`=`<sourceDiscordID>` (example: `758553483966448477`)<br>
-
-```bash
-curl --location --request PUT 'https://api.ruehrstaat.de/api/v1/carrierService' \
---header 'Authorization: Bearer Rnfk4apD6qRpHQPer4sg5sNdeo4DRbFmrhPcCd6kR' \
---form 'id="6695835845"' \
---form 'operation="activate"' \
---form 'source="Discord"' \
---form 'discord_id="758553483966448477"' \
---form 'service="VoucherRedemption"'
-```
-
-#### Example Responses
-
-```json
-{
-    "success": "Service activated"
-}
-```
-
+---
 ### carrier
 
 Returns specified carrier options registered in the database, can be used to update the carrier, create a new carrier or delete a carrier.
 
-#### Request
+#### Requests
 **Allowed-Types:** `GET`,`PUT`,`POST`,`DELETE`<br>
-#### GET Request + Response
+##### GET carrier
 **Required-Parameters:**<br>
 `id`=`<carrierID>` (example: `6695835845`)<br>
 **OR**<br>
@@ -391,7 +284,7 @@ curl --location 'https://api.ruehrstaat.de/api/v1/carrier?id=6695835845' \
 }
 ```
 
-#### PUT Request + Response
+##### PUT carrier
 Used to update carrier-data in the database.<br>
 **Required-Parameters:**<br>
 `id`=`<carrierID>` (example: `6695835845`)<br>
@@ -450,7 +343,7 @@ curl --location --request PUT 'https://api.ruehrstaat.de/api/v1/carrier' \
 }
 ```
 
-#### POST Request + Response
+##### POST carrier
 Used to create a new carrier in the database.<br>
 **Required-Parameters:**<br>
 `id`=`<carrierID>` (example: `6695835845`)<br>
@@ -506,7 +399,7 @@ curl --location --request POST 'https://api.ruehrstaat.de/api/v1/carrier' \
 }
 ```
 
-#### DELETE Request + Response
+##### DELETE carrier
 Used to delete a carrier from the database.<br>
 **Required-Parameters:**<br>
 `id`=`<carrierID>` (example: `6695835845`)<br>
