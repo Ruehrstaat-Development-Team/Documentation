@@ -1,10 +1,10 @@
 <!-- _coverpage.md -->
 
-![logo](static/Logo200x200.png)
+![logo](../static/Logo200x200.png)
 
 # RUEHRSTAAT API<small>Docs</small>
 
 > Documentation for all Ruehrstaat Systems
 
-[Home](https://docs.ruehrstaat.de/)
+[Home](/)
 [Get Started](#introduction)
