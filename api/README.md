@@ -392,7 +392,7 @@ curl --location 'https://api.ruehrstaat.de/api/v1/carrier?id=6695835845' \
 ```
 
 #### PUT Request + Response
-Used to update carrier-data in the database.
+Used to update carrier-data in the database.<br>
 **Required-Parameters:**<br>
 `id`=`<carrierID>` (example: `6695835845`)<br>
 
@@ -451,7 +451,7 @@ curl --location --request PUT 'https://api.ruehrstaat.de/api/v1/carrier' \
 ```
 
 #### POST Request + Response
-Used to create a new carrier in the database.
+Used to create a new carrier in the database.<br>
 **Required-Parameters:**<br>
 `id`=`<carrierID>` (example: `6695835845`)<br>
 `name`=`<carrierName>` (example: `RST Documentation`)<br>
@@ -507,7 +507,7 @@ curl --location --request POST 'https://api.ruehrstaat.de/api/v1/carrier' \
 ```
 
 #### DELETE Request + Response
-Used to delete a carrier from the database.
+Used to delete a carrier from the database.<br>
 **Required-Parameters:**<br>
 `id`=`<carrierID>` (example: `6695835845`)<br>
 
