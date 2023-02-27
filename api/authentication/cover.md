@@ -6,9 +6,10 @@
 
 > Authentication<br>v1.0.2
 
+[Introduction](/api/#api-documentation)
 [Authentication](#api-documentation)
-[General API](/api/#api-documentation)
+[General API](/api/general/#api-documentation)
 [Connector API](/api/connector/#api-documentation)
 [Errors](/api/errors/#api-documentation)
-[Docs-Home](/)
+[Home](/)
 

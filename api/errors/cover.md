@@ -6,8 +6,9 @@
 
 > Errors and Exceptions<br>v1.0.2
 
+[Introduction](/api/#api-documentation)
 [Authentication](/api/authentication/#api-documentation)
-[General API](/api/#api-documentation)
+[General API](/api/general/#api-documentation)
 [Connector API](/api/connector/#api-documentation)
 [Errors](#api-documentation)
 [Home](/)
