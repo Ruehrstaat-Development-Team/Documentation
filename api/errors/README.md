@@ -156,4 +156,6 @@ Any 5xx error is a server error. This means that something went wrong on our sid
 **Example:**<br>
 Status: `200 OK`
 
+While this is not an error, it is here to complete the list.
+
 Any 2xx error is a success. This means that your request was successful and you should get a response. If you get a 2xx error, please check the response body for the data you requested.
