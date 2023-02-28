@@ -1,4 +1,3 @@
-# API Documentation
 # Connector API
 
 ## API Endpoints
