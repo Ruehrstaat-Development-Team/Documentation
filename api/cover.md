@@ -6,9 +6,9 @@
 
 > Introduction<br>v1.0.2
 
-[Introduction](#api-documentation)
-[Authentication](/api/authentication/#api-documentation)
-[General API](/api/general/#api-documentation)
-[Connector API](/api/connector/#api-documentation)
-[Errors](/api/errors/#api-documentation)
+[Introduction](#introduction)
+[Authentication](/api/authentication/#authentication)
+[General API](/api/general/#general-api)
+[Connector API](/api/connector/#connector-api)
+[Errors](/api/errors/#errors)
 [Home](/)

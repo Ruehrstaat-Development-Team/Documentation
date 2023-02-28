@@ -1,4 +1,3 @@
-# API Documentation
 # Introduction
 
 ## What is the Ruehrstaat API?

@@ -1,5 +1,4 @@
-# API Documentation
-# GENERAL USE API
+# GENERAL API
 ## API Endpoints
 
 ### getAllCarriers
