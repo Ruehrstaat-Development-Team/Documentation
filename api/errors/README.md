@@ -31,7 +31,16 @@ This error occurs when you try to access a carrier endpoint but you did not prov
 }
 ```
 
-This error occurs when you query an endpoint with the wrong request type for the parameters you provided. Please make sure to use the correct request type for the parameters you provided or edit your request to use the correct parameters. If you want to create a carrier, please use a POST request, if you want to edit a carrier, please use a PUT request.
+This error occurs when you query an endpoint with the wrong request type for the parameters you provided. Please make sure to use the correct request type for the parameters you provided or edit your request to use the correct parameters. If you want to create a carrier, please use a [POST request](/api/general/?id=post-carrier), if you want to edit a carrier, please use a [PUT request](/api/general/?id=put-carrier).
+
+### Carrier id provided, use PUT request to edit carrier
+```json
+{
+    "error": "Carrier id provided, use PUT request to edit carrier"
+}
+```
+
+This error occurs when you query an endpoint with the wrong request type for the parameters you provided. Please make sure to use the correct request type for the parameters you provided or edit your request to use the correct parameters. If you want to create a carrier, please use a [POST request](/api/general/?id=post-carrier), if you want to edit a carrier, please use a [PUT request](/api/general/?id=put-carrier).
 
 ### No type provided
 ```json
@@ -60,6 +69,15 @@ This error occurs when you try to access a carrier endpoint but you provided an 
 
 This error occurs when you try to access a carrier endpoint but you did not provide a body. This error is used by the [carrierJump](/api/connector/#put-carrierjump) endpoint. If you get this error, please check that you are quering the correct endpoint and that you provided a body. A valid body looks like this: `Sowiio ABC 1`.
 
+### No previous location found
+```json
+{
+    "error": "No previous location found"
+}
+```
+
+This error occurs when you try to access a carrier endpoint but you did not provide a previous location. This error is used by the [carrierJump](/api/connector/#put-carrierjump) endpoint. If you get this error, please check that you are quering the correct endpoint and that you provided a previous location. A valid previous location looks like this: `Sowiio ABC 1`.
+
 ### No access provided
 ```json
 {
@@ -69,7 +87,23 @@ This error occurs when you try to access a carrier endpoint but you did not prov
 
 This error occurs when you try to access a carrier endpoint but you did not provide an access. This error is used by the [carrierPermission](/api/connector/#put-carrierpermission) endpoint. If you get this error, please check that you are quering the correct endpoint and that you provided an access. Valid access types can be found in the documentation of the endpoint.
 
+### No operation provided
+```json
+{
+    "error": "No operation provided"
+}
+```
 
+This error occurs when you try to access a carrier endpoint but you did not provide an operation. This error is used by the [carrierService](/api/connector/?id=put-carrierservice) endpoint. If you get this error, please check that you are quering the correct endpoint and that you provided an operation. Valid operation types can be found in the documentation of the endpoint.
+
+### No service provided
+```json
+{
+    "error": "No service provided"
+}
+```
+
+This error occurs when you try to access a carrier endpoint but you did not provide a service. This error is used by the [carrierService](/api/connector/?id=put-carrierservice) endpoint. If you get this error, please check that you are quering the correct endpoint and that you provided a service. Valid service types can be found in the documentation of the endpoint.
 
 
 ## 401 - Unauthorized
