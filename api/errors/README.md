@@ -87,6 +87,15 @@ This error occurs when you try to access a carrier endpoint but you did not prov
 
 This error occurs when you try to access a carrier endpoint but you did not provide an access. This error is used by the [carrierPermission](/api/connector/#put-carrierpermission) endpoint. If you get this error, please check that you are quering the correct endpoint and that you provided an access. Valid access types can be found in the documentation of the endpoint.
 
+### Invalid access provided
+```json
+{
+    "error": "Invalid access provided"
+}
+```
+
+This error occurs when you try to access a carrier endpoint but you provided an invalid access. This error is used by the [carrierPermission](/api/connector/#put-carrierpermission) endpoint. If you get this error, please check that you are quering the correct endpoint, that you provided a valid access and that this access is supported by the endpoint. Valid access types can be found in the documentation of the endpoint.
+
 ### No operation provided
 ```json
 {
@@ -95,6 +104,15 @@ This error occurs when you try to access a carrier endpoint but you did not prov
 ```
 
 This error occurs when you try to access a carrier endpoint but you did not provide an operation. This error is used by the [carrierService](/api/connector/?id=put-carrierservice) endpoint. If you get this error, please check that you are quering the correct endpoint and that you provided an operation. Valid operation types can be found in the documentation of the endpoint.
+
+### Invalid operation provided
+```json
+{
+    "error": "Invalid operation provided"
+}
+```
+
+This error occurs when you try to access a carrier endpoint but you provided an invalid carrier service. This error is used by the [carrierService](/api/connector/#put-carrierservice) endpoint. If you get this error, please check that you are querying the correct endpoint, that you provided a valid carrier service and that this carrier service is registered in our system. 
 
 ### No service provided
 ```json
@@ -165,15 +183,6 @@ This error occurs when you try to access a carrier endpoint but you provided an 
 ```json
 {
     "error": "Invalid carrier service provided"
-}
-```
-
-This error occurs when you try to access a carrier endpoint but you provided an invalid carrier service. This error is used by the [carrierService](/api/connector/#put-carrierservice) endpoint. If you get this error, please check that you are querying the correct endpoint, that you provided a valid carrier service and that this carrier service is registered in our system. 
-
-### Invalid operation provided
-```json
-{
-    "error": "Invalid operation provided"
 }
 ```
 
