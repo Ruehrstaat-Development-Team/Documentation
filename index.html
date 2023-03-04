@@ -2,155 +2,50 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8">
-  <title>Ruehrstaat Docs</title>
-  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
-  <meta name="description" content="Description">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
-  <!-- Theme -->
-  <link rel="stylesheet" href="theme.css">
-  <link rel="stylesheet" href="select.css">
-  <!-- include index.css stylesheet-->
-  <link rel="stylesheet" href="index.css">
-  <!-- FontAwesome -->
-  <script src="https://kit.fontawesome.com/76a71f7319.js" crossorigin="anonymous"></script>
-  <!-- Scripts -->
-  <script src="select.js"></script>
-  <script src="main.js"></script>
+    <meta charset="UTF-8">
+    <title>Ruehrstaat Docs</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="description" content="Description">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
+    <!-- Theme -->
+    <link rel="stylesheet" href="css/theme.css">
+    <link rel="stylesheet" href="css/select.css">
+    <!-- FontAwesome -->
+    <script src="https://kit.fontawesome.com/76a71f7319.js" crossorigin="anonymous"></script>
+    <!-- Scripts -->
+    <script src="main.js"></script>
+
+    <!-- Highlight.js-->
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/styles/github-dark.min.css">
+    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/highlight.min.js"></script>
 </head>
 
 <body>
-  <div class="ui-view">
-    <aside class="sidebar">
-      <div id="menu-handle">
-        <i class="fas fa-bars"></i>
-      </div>
-      <div class="box" id="sidebar">
-        <header>
-          <div id="menu" class="menu-select">
+    <header id="header">
+        <ul>
+            <li><a>Home</a></li>
+            <li>API</li>
+            <li>Discord Bot</li>
+            <li>EDMC Plugin</li>
+        </ul>
+        <div class="version-selector version-select">
             <select>
-              <option>Introduction</option>
-              <option>Authentification</option>
-              <option>General API</option>
-              <option>Connector API</option>
+                <option>v1.0.0</option>
+                <option>dev</option>
             </select>
-          </div>
-        </header>
-        <section>
-          <ul class="first-item">
-            <li>API Endpoints</li>
-            <ul>
-              <li>carrierJump</li>
-              <ul>
-                <li>Request</li>
-                <ul>
-                  <li>PUT carrierJump</li>
-                  <ul>
-                    <li>Type jump</li>
-                    <li>Type cancel</li>
-                  </ul>
-                </ul>
-              </ul>
-            </ul>
-          </ul>
-        </section>
-      </div>
-
-
-    </aside>
-    <main class="content">
-      eeeeee<br>
-      eeeeee<br>
-      eeeeee<br>
-      eeeeee<br>
-      eeeeee<br>
-      eeeeee<br>
-      eeeeee<br>
-      eeeeee<br>
-      eeeeee<br>
-      eeeeee<br>
-      eeeeee<br>
-      eeeeee<br>
-      eeeeee<br>
-      eeeeee<br>
-      eeeeee<br>
-      eeeeee<br>
-      eeeeee<br>
-      eeeeee<br>
-      eeeeee<br>
-      eeeeee<br>
-      eeeeee<br>
-      eeeeee<br>
-      eeeeee<br>
-      eeeeee<br>
-      eeeeee<br>
-      eeeeee<br>
-      eeeeee<br>
-      eeeeee<br>
-      eeeeee<br>
-      eeeeee<br>
-      eeeeee<br>
-      eeeeee<br>
-      eeeeee<br>
-      eeeeee<br>
-      eeeeee<br>
-      eeeeee<br>
-      eeeeee<br>
-      eeeeee<br>
-      eeeeee<br>
-      eeeeee<br>
-      eeeeee<br>
-      eeeeee<br>
-      eeeeee<br>
-      eeeeee<br>
-      eeeeee<br>
-      eeeeee<br>
-      eeeeee<br>
-      eeeeee<br>
-      eeeeee<br>
-      eeeeee<br>
-      eeeeee<br>
-      eeeeee<br>
-      eeeeee<br>
-      eeeeee<br>
-      eeeeee<br>
-      eeeeee<br>
-      eeeeee<br>
-      eeeeee<br>
-      eeeeee<br>
-      eeeeee<br>
-      eeeeee<br>
-      eeeeee<br>
-      eeeeee<br>
-      eeeeee<br>
-      eeeeee<br>
-      eeeeee<br>
-      eeeeee<br>
-      eeeeee<br>
-      eeeeee<br>
-      eeeeee<br>
-      eeeeee<br>
-      eeeeee<br>
-      eeeeee<br>
-      eeeeee<br>
-      eeeeee<br>
-      eeeeee<br>
-      eeeeee<br>
-      eeeeee<br>
-      eeeeee<br>
-      eeeeee<br>
-      eeeeee<br>
-      eeeeee<br>
-      eeeeee<br>
-      eeeeee<br>
-      eeeeee<br>
-      eeeeee<br>
-      eeeeee<br>
-      eeeeee<br>
-      eeeeee<br>
-      eeeeee<br>
-    </main>
-  </div>
+        </div>
+    </header>
+    <div class="ui-view">
+        <aside class="sidebar">
+            <div id="menu-handle">
+                <i class="fas fa-bars"></i>
+            </div>
+            <div class="box" id="sidebar">
+            </div>
+        </aside>
+        <main id="content">
+        </main>
+    </div>
 
 </body>
 
