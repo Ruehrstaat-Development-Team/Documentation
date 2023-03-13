@@ -412,6 +412,26 @@ curl --location --request DELETE 'https://api.ruehrstaat.de/api/v1/carrier' \
 }
 ```
 
+##### HEAD carrier
+Used to check if a carrier has been modified since the specified timestamp.<br>
+**Required-Parameters:**<br>
+`id`=`<carrierID>` (example: `6695835845`)<br>
+`timestamp`=`<timestamp>` (example: `2023-03-13T23:10:59.318Z` OR `1678746949`)<br>
+
+**Optional-Parameters:**<br>
+`source`=`<sourceApplication>` (example: `EDMC`, default: `other`)<br>
+
+**REQUEST**
+```bash
+curl --location --request HEAD 'https://api.ruehrstaat.de/api/v1/carrier?id=6695835845&timestamp=2023-03-13T23:10:59.318Z' \
+--header 'Authorization: Bearer EDh0tFuo.jlIutR2clcz6b9Eyuyx0U7jr7Wlf6QqB' \
+```
+
+**RESPONSE** <br>
+*Status 200 OK* - IF: Carrier has been modified since the specified timestamp<br>
+*Status 304 Not Modified* - IF: Carrier has not been modified since the specified timestamp<br>
+
+
 
 
 

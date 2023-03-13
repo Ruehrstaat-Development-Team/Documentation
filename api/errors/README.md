@@ -123,6 +123,24 @@ This error occurs when you try to access a carrier endpoint but you provided an 
 
 This error occurs when you try to access a carrier endpoint but you did not provide a service. This error is used by the [carrierService](/api/connector/?id=put-carrierservice) endpoint. If you get this error, please check that you are quering the correct endpoint and that you provided a service. Valid service types can be found in the documentation of the endpoint.
 
+### No timestamp provided
+```json
+{
+    "error": "No timestamp provided"
+}
+```
+
+This error occurs when you try to access a carrier endpoint but you did not provide a timestamp. This error is used by the [carrierHEAD](/api/general/#head-carrier) endpoint. If you get this error, please check that you are quering the correct endpoint and that you provided a timestamp. A valid timestamp looks like this `2023-03-13T23:10:59.318Z` OR like this `1678746949`.
+
+### Invalid timestamp provided
+```json
+{
+    "error": "Invalid timestamp provided"
+}
+```
+
+This error occurs when you try to access a carrier endpoint but you provided an invalid timestamp. This error is used by the [carrierHEAD](/api/general/#head-carrier) endpoint. If you get this error, please check that you are quering the correct endpoint and that you provided a valid timestamp. A valid timestamp looks like this `2023-03-13T23:10:59.318Z` OR like this `1678746949`.
+
 
 ## 401 - Unauthorized
 **Example:**<br>
