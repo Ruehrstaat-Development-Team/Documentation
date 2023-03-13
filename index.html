@@ -7,6 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
     <meta name="description" content="Description">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="/static/LogoClean.png">
     <!-- Theme -->
     <link rel="stylesheet" href="css/theme.css">
     <link rel="stylesheet" href="css/select.css">
@@ -14,39 +15,65 @@
     <script src="https://kit.fontawesome.com/76a71f7319.js" crossorigin="anonymous"></script>
     <!-- Scripts -->
     <script src="main.js"></script>
-
+    <script src="theme.js"></script>
     <!-- Highlight.js-->
     <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/styles/github-dark.min.css">
     <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/highlight.min.js"></script>
 </head>
 
 <body>
-    <header id="header">
-        <ul>
-            <li><a>Home</a></li>
-            <li>API</li>
-            <li>Discord Bot</li>
-            <li>EDMC Plugin</li>
-        </ul>
-        <div class="version-selector version-select">
-            <select>
-                <option>v1.0.0</option>
-                <option>dev</option>
-            </select>
-        </div>
-    </header>
-    <div class="ui-view">
-        <aside class="sidebar">
-            <div id="menu-handle">
-                <i class="fas fa-bars"></i>
+    <div id="background"></div>
+    <main>
+        <header>
+            <div class="logo">
+                <img src="static/Logo.png" />
             </div>
-            <div class="box" id="sidebar">
+            <h1>
+                Ruehrstaat Squadron <sub>Docs</sub>
+            </h1>
+        </header>
+        <section>
+            <div class="card-wrapper">
+                <div class="card">
+                    <div class="image">
+                        <div class="filter">
+                        </div>
+                        <div class="icon">
+                            <i class="fas fa-server fa-4x"></i>
+                        </div>
+                    </div>
+                    <div class="content">
+                        <h2>Carrier API</h2>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="image">
+                        <div class="filter">
+                        </div>
+                        <div class="icon">
+                            <i class="fab fa-discord fa-4x"></i>
+                        </div>
+                    </div>
+                    <div class="content">
+                        <h2>Discord Bot</h2>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="image">
+                        <div class="filter">
+                        </div>
+                        <div class="icon">
+                            <i class="fas fa-solid fa-arrow-right-arrow-left fa-4x"></i>
+                        </div>
+                    </div>
+                    <div class="content">
+                        <h2>EDMC Plugin</h2>
+                    </div>
+                </div>
+                
             </div>
-        </aside>
-        <main id="content">
-        </main>
-    </div>
-
+        </section>
+    </main>
 </body>
 
 </html>
